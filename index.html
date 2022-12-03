@@ -1,0 +1,40 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="logo.png">
+        <title>Dashboard</title>
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <main>    
+            <div class="top">
+                <div id="myLinks">
+                    <div class="addOrRemove">
+                        <button type='button' id="addLinkBtn">+</button>
+                        <button type='button' id="removeLinkBtn">−</button>
+                    </div>
+                    <div class="addLink">
+                        <form class="addLinkForm">
+                            <input type="textarea" placeholder="Title" id="formTitle">
+                            <input type="textarea" placeholder="URL" id="formURL">
+                            <button type='button' id="addFormBtn">Add</button>
+                        </form>
+                    </div>
+                    <div id="allLinks">
+                    </div>
+                </div>
+                <div id="weather"></div>
+            </div>
+            <div class="time">
+                <h1 id="time"></h1>
+                <h2 id="showName">
+                    <p>Hello, what is your name?</p>
+                    <input id="getShowName" type='textarea'>
+                </h2>
+            </div>
+            
+            <p id="author"></p>
+        </main>
+    </body>
+</html>
