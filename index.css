@@ -29,10 +29,12 @@ div.top {
 }
 
 .time {
-    text-align: center;
-    margin-top: -20em; 
+    text-align: center; 
     width: 50%;
-    margin: -20em auto 0 auto;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+
 }
 
 div#crypto {
@@ -117,6 +119,7 @@ p.weather-temp {
     border: none;
 }
 
+
 #allLinks{
     text-align: left;
 }
@@ -145,4 +148,9 @@ p.weather-temp {
 #getShowName:hover,
 #getShowName:focus{
     outline: none;
+    background: transparent;
+}
+
+#showName p{
+    font-size: 1.25rem;
 }

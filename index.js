@@ -1,7 +1,3 @@
-document.body.style.visibility = 'hidden'
-setTimeout(()=>{
-    document.body.style.visibility = 'visible'
-},1350)
 
 fetch("https://api.unsplash.com/photos/random?query=nature&client_id=P1Qo9LPylsLT9IsyEINd-LFdSTeENYO4x9olDXp7zfM")
     .then(res => res.json())
@@ -132,29 +128,37 @@ removeLinkBtn.addEventListener('click', ()=>{
     })
 })
 
-document.getElementById('getShowName').addEventListener('keypress', e => {
-    if(e.key === 'Enter'){
-        localStorage.setItem('name', document.getElementById('getShowName').value)
-        renderName()
-    }
-})
+function addEventListenerName(){
+    document.getElementById('getShowName').addEventListener('keypress', e => {
+        if(e.key === 'Enter'){
+            localStorage.setItem('name', document.getElementById('getShowName').value)
+            renderName()
+        }
+    })
+}
 
 function renderName(){
-    if(localStorage.getItem('name')){
-        let name = localStorage.getItem('name')
+    let name = localStorage.getItem('name')
+    if(!name){
+        document.getElementById('insertName').innerHTML = `
+        <h2 id="showName">
+        <p>Hello, what is your name?</p>
+            <input id="getShowName" type='textarea'>
+        </h2>`
+        addEventListenerName()
+    }
+    if(name){
         fetch('https://www.greetingsapi.com/random')
         .then(res=>res.json())
         .then(data=>{
-            document.getElementById('showName').innerHTML = `
-            <h2>${data.greeting}, ${name}</h2>
+            document.getElementById('insertName').innerHTML = `
+            <h2>   ${data.greeting}, ${name} 👋</h2>
             <p>(${data.language})</p>
             `
         })
-
     }
 }
 
 renderName()
 renderLinks()
-
 
