@@ -154,3 +154,7 @@ p.weather-temp {
 #showName p{
     font-size: 1.25rem;
 }
+
+#author{
+    font-size: 0.5em;
+}
