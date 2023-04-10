@@ -158,3 +158,8 @@ p.weather-temp {
 #author{
     font-size: 0.5em;
 }
+
+#insertName a{
+    color: inherit;
+    text-decoration: none;
+}

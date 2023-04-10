@@ -153,7 +153,7 @@ function renderName(){
         .then(data=>{
             document.getElementById('insertName').innerHTML = `
             <h2>${data.greeting}, ${name} 👋</h2>
-            <p>(${data.language})</p>
+            <p><a href='https://www.google.com/search?q=${data.language}+language' target='_blank'>(${data.language})</a></p>
             `
         })
     }
