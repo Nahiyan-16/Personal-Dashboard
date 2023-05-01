@@ -81,6 +81,11 @@ p.weather-temp {
     margin-left: -10px;
 }
 
+#weatherLink{
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* Links */
 
